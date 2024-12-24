@@ -46,7 +46,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-8">
+    <div className="flex flex-col items-center p-8 ">
       <h1 className="text-xl font-bold mb-6">Search GitHub User</h1>
       <div className="flex gap-6 items-center flex-col mb-6">
         <input

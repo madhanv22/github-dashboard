@@ -1,16 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Search from "./pages/Search";
-import History from "./pages/History";
+// App.jsx
+import { Routes, Route } from "react-router-dom";
+import Dashboard from './pages/Dashboard';
+import Search from './pages/Search';
+import History from './pages/History';
+import Navbar from './components/Navbar';
 
 const App = () => (
-  <Router>
-    <Navbar />
+  <div>
     <Routes>
-      <Route path="/" element={<Search />} />
-      <Route path="/history" element={<History />} />
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/search" element={<><Navbar /><Search /></>} />
+      <Route path="/history" element={<><Navbar /><History /></>} />
     </Routes>
-  </Router>
+  </div>
 );
 
 export default App;
