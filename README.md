@@ -1,9 +1,6 @@
 GitHub Dashboard Application
+
 This project is a frontend coding challenge built as a single-page application using React, javaScript, and Tailwind CSS. It consumes the GitHub API to fetch user information and implements key features such as user search, search history, and profile details. The application demonstrates best practices, intuitive design, and effective use of modern frontend tools and technologies.
-
-
-GitHub Dashboard Application
-This project is a frontend coding challenge built as a single-page application using React, TypeScript, and Tailwind CSS. It consumes the GitHub API to fetch user information and implements key features such as user search, search history, and profile details. The application demonstrates best practices, intuitive design, and effective use of modern frontend tools and technologies.
 
 📁 Deliverables
 Source Code: https://github.com/madhanv22/github-dashboard̥
@@ -29,7 +26,7 @@ Clear History
 Remove specific search history entries to keep the history page organized.
 
 🛠 Tech Stack
-React with TypeScript
+React with javascript
 Tailwind CSS for styling
 Local Storage for search history persistence
 GitHub API for fetching user information
