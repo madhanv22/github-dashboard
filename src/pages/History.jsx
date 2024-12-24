@@ -15,19 +15,32 @@ const History = () => {
 
 
   return (
-    <div className="p-8 flex flex-col items-center">
+    <div className="p-8 bg-pink-50 flex flex-col items-center">
       <h1 className="text-xl font-bold mb-6">Search History</h1>
       {history.length === 0 ? (
         <p>No search history available.</p>
       ) : (
-        <div className="w-72">
-          <ul className="space-y-4">
+        <div className="w-full lg:w-1/2">
+          <ul className="">
+            <ul className="flex bg-gray-200 justify-between items-start border py-4 px-8 w-auto mb-[0.5px]">
+              <li className="text-gray-600 font-medium">Search Team</li>
+              <li className="text-gray-600 font-medium">Search Results</li>
+            </ul>
             {history.map((entry, index) => (
               <li
                 key={index}
-                className="flex justify-between items-center border gap-8 p-4 rounded-md w-72 shadow-sm"
+                className="flex flex-col md:flex-row justify-between items-start border gap-8 p-4 w-auto mb-[0.8px] bg-white"
               >
-                <div className="flex items-center gap-4">
+              <div className="mx-4">
+                {entry.result ? (
+                  <>
+                    <p className="text-gray-600 text-lg">{entry.result.username}</p>
+                  </>
+                ) : (
+                  <p className="text-gray-700 text-lg">{entry.term}</p>
+                )}
+              </div>
+                <div className="flex items-start gap-4 px-10">
                   {entry.result && entry.result.avatar && (
                     <img
                       src={entry.result.avatar}
@@ -38,7 +51,7 @@ const History = () => {
                   <div>
                     {entry.result ? (
                       <>
-                        <p className="font-medium text-xl">{entry.result.username}</p>
+                        <p className="text-lg">{entry.result.username}</p>
                         <a
                           href={entry.result.url}
                           target="_blank"
@@ -60,7 +73,7 @@ const History = () => {
       )}
       <button
         onClick={clearAllSearches}
-        className="bg-red-600 text-white px-4 py-2 rounded-lg mb-6 w-60 mt-10"
+        className="bg-green-400 hover:bg-green-800 text-white px-4 py-2 mb-6 w-60 mt-10"
       >
         Clear All
       </button>
