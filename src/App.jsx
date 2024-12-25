@@ -1,4 +1,3 @@
-// App.jsx
 import { Routes, Route } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
 import Search from './pages/Search';
