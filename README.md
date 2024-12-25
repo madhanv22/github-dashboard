@@ -58,6 +58,9 @@ git clone https://github.com/madhanv22/github-dashboard.git
 
 cd github-dashboard
 
+Deploy link:
+https://madhanv22.github.io/github-dashboard/
+
 Install dependencies:
 npm install
 
